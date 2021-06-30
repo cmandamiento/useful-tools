@@ -1,14 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Container from "@material-ui/core/Container";
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import App from "./App";
+import "./index.css";
+import Whatsapp from "./pages/Whatsapp";
+import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <Router>
+    <React.StrictMode>
+      <Switch>
+        <Container maxWidth="sm">
+          <Route path="/" exact component={App} />
+          <Route path="/whatsapp" exact component={Whatsapp} />
+        </Container>
+      </Switch>
+    </React.StrictMode>
+  </Router>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
