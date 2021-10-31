@@ -41,7 +41,7 @@ const Whatsapp = () => {
               type="tel"
               onChange={handleChange}
               value={tel}
-              inputProps={{ maxLength: 9, minLength: 9 }}
+              inputProps={{ maxLength: 15, minLength: 9 }}
             /></FormControl>
         </div>
         <Box mt={2}>

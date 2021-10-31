@@ -5,6 +5,7 @@
 }
 
 .form {
+  align-items: center;
   display: flex;
 }
 
