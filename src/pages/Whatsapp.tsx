@@ -23,19 +23,19 @@ const Whatsapp = () => {
   return (
     <Box display="flex" justifyContent="center">
       <div>
-        <div className="form">
-          <FormControl className="formCountry">
+        <div>
+          <FormControl>
             <Select
               value={country}
               label="Country"
               onChange={handleCountry}
             >
               {countries.map(opt => (
-                <MenuItem value={opt.value} key={opt.id}>{opt.value}</MenuItem>
+                <MenuItem value={opt.value} key={opt.id}>{opt.label}</MenuItem>
               ))}
             </Select>
           </FormControl>
-          <FormControl className="formPhone">
+          <FormControl>
             <TextField
               label="Phone"
               type="tel"
@@ -49,7 +49,7 @@ const Whatsapp = () => {
             component="a"
             href={`https://wa.me/${country}${tel}`}
             variant="outlined"
-            disabled={tel.length !== 9}
+            //disabled={tel.length !== 9}
             target="_blank"
           >
             Open whatsapp
