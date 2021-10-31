@@ -16,7 +16,7 @@ const Whatsapp = () => {
     setTel(event.target?.value);
   };
 
-  const handleCountry = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleCountry = (event: any) => {
     setCountry(event.target?.value);
   };
 
